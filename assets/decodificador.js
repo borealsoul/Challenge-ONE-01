@@ -31,20 +31,40 @@ function esconderTelaPadrao() {
 
 }
 
-function criptografar() {
+function apertoBotao(botao) {
   let campo_texto = pegarCampoTexto();
+  let resposta_texto;
 
   if (!eTextoPermitido(campo_texto)) {
     console.log(eTextoPermitido(campo_texto));
-  } else {
-    campo_texto = campo_texto.replaceAll("e", "enter");
-    campo_texto = campo_texto.replaceAll("i", "imes");
-    campo_texto = campo_texto.replaceAll("a", "ai");
-    campo_texto = campo_texto.replaceAll("o", "ober");
-    campo_texto = campo_texto.replaceAll("u", "ufat");
+    return false;
+  } else if (botao == "criptografar") {
+    resposta_texto = criptografar(campo_texto);
+  } else if (botao == "descriptografar") {
+    resposta_texto = descriptografar(campo_texto);
 
-    esconderTelaPadrao();
-    alterarResposta(campo_texto);
   }
+  esconderTelaPadrao();
+  alterarResposta(resposta_texto);
 }
 
+
+function criptografar(texto) {
+  texto = texto.replaceAll("e", "enter");
+  texto = texto.replaceAll("i", "imes");
+  texto = texto.replaceAll("a", "ai");
+  texto = texto.replaceAll("o", "ober");
+  texto = texto.replaceAll("u", "ufat");
+
+  return texto;
+}
+
+function descriptografar(texto) {
+  texto = texto.replaceAll("ufat", "u");
+  texto = texto.replaceAll("ober", "o");
+  texto = texto.replaceAll("ai", "a");
+  texto = texto.replaceAll("imes", "i");
+  texto = texto.replaceAll("enter", "e");
+
+  return texto;
+}
