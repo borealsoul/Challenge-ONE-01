@@ -7,6 +7,7 @@
   <title>Decodificador</title>
   <link rel="stylesheet" href="./assets/style/main.css">
   <script src="https://kit.fontawesome.com/d2debce941.js" crossorigin="anonymous"></script>
+  <script src="./assets/decodificador.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
       <div id="inferior-insercao">
         <p><i class="fa-solid fa-circle-info"></i>Apenas letras minúsculas e sem acento.</p>
         <div id="botoes-insercao">
-          <button id="criptografar"><span>Criptografar</span></button>
+          <button id="criptografar" onclick="criptografar()"><span>Criptografar</span></button>
           <button id="descriptografar"><span>Descriptografar</span></button>
         </div>
       </div>
@@ -36,7 +37,7 @@
         <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
       </div>
       <div id="resposta">
-        <p>
+        <p id="texto-resposta">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore molestias laboriosam sint aut quod
           labore ex laborum doloribus officia, similique, soluta illum aliquam? Laudantium vel consequatur ipsa
           deleniti?

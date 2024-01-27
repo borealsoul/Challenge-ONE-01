@@ -114,7 +114,7 @@ button:hover span {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 2em rgb(0, 0, 0, 30%);
-  /* justify-content: center; */
+  justify-content: center;
   padding: 3%;
   text-align: center;
   width: 35%;
@@ -125,13 +125,14 @@ button:hover span {
 }
 
 #nao-encontrado {
-  display: none;
+  /* display: none; */
   gap: 1em;
 }
 
 #resposta {
   box-sizing: border-box;
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
