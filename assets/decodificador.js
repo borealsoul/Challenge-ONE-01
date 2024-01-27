@@ -68,3 +68,11 @@ function descriptografar(texto) {
 
   return texto;
 }
+
+function copiarTexto(texto) {
+  navigator.clipboard.writeText(texto).then(
+    function() {
+      // console.log("Copiado :3");
+    }
+  );
+}
